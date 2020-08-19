@@ -1,0 +1,19 @@
+.repoCard {
+  max-width: 300px;
+  width: 90%;
+  height: 80px;
+  border: 1px solid #eeeeee;
+  color: #eeeeee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.repoCard:hover {
+  border: 1px solid #32e0c4;
+  color: #32e0c4;
+}

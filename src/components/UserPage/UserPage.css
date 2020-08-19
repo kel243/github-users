@@ -1,0 +1,39 @@
+.user-page {
+  width: 100%;
+  padding: 80px 0 0 0;
+}
+
+.user-container {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user-container-dark {
+  background: #393e46;
+  color: #32e0c4;
+}
+
+.user-heading {
+  font-size: 30px;
+}
+
+.user-repos,
+.user-followers {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.user-follower {
+  font-size: 20px;
+  margin: 10px 30px;
+  cursor: pointer;
+  color: #eeeeee;
+  transition: all 0.1s ease;
+}
+
+.user-follower:hover {
+  color: #32e0c4;
+}
