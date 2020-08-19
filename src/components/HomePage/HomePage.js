@@ -4,7 +4,8 @@ import "./HomePage.css";
 
 function HomePage() {
   const buttonRef = useRef(null);
-  const SearchRef = useRef(false);
+  const inputRef = useRef(null);
+  const searchRef = useRef(false);
   const [Users, setUsers] = useState([]);
   const [UsersList, setUsersList] = useState([]);
   const [Query, setQuery] = useState("");
@@ -19,7 +20,6 @@ function HomePage() {
   }, []);
 
   useEffect(() => {
-    console.log(SearchRef.current);
     if (Query !== "") {
       setUsers(searchUsers(Query));
     } else {
@@ -68,7 +68,7 @@ function HomePage() {
     );
     const windowBottom = windowHeight + window.pageYOffset;
     if (windowBottom >= docHeight - 1) {
-      if (buttonRef && buttonRef.current && !SearchRef.current) {
+      if (buttonRef && buttonRef.current && !searchRef.current) {
         buttonRef.current.click();
       }
     }
@@ -76,15 +76,21 @@ function HomePage() {
 
   const handleChange = (e) => {
     if (e.target.value === "") {
-      SearchRef.current = false;
+      searchRef.current = false;
     } else {
-      SearchRef.current = true;
+      searchRef.current = true;
     }
     setQuery(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (inputRef.current.value === "") {
+      searchRef.current = false;
+    } else {
+      searchRef.current = true;
+    }
+    setQuery(inputRef.current.value);
   };
 
   return (
@@ -92,6 +98,7 @@ function HomePage() {
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <input
+            ref={inputRef}
             type="text"
             name="query"
             value={Query}
