@@ -89,8 +89,8 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <div className="input-container">
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
           <input
             type="text"
             name="query"
@@ -98,9 +98,9 @@ function HomePage() {
             onChange={handleChange}
             placeholder="Search Users"
           />
-        </form>
-        <div className="search"></div>
-      </div>
+          <div className="search"></div>
+        </div>
+      </form>
       <div className="users">
         {Users &&
           Users.map((user, index) => {
