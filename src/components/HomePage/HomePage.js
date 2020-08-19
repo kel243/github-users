@@ -85,12 +85,7 @@ function HomePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputRef.current.value === "") {
-      searchRef.current = false;
-    } else {
-      searchRef.current = true;
-    }
-    setQuery(inputRef.current.value);
+    inputRef.current.blur();
   };
 
   return (
