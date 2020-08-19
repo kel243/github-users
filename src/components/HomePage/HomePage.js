@@ -83,16 +83,22 @@ function HomePage() {
     setQuery(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="home-page">
       <div className="input-container">
-        <input
-          type="text"
-          name="query"
-          value={Query}
-          onChange={handleChange}
-          placeholder="Search Users"
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="query"
+            value={Query}
+            onChange={handleChange}
+            placeholder="Search Users"
+          />
+        </form>
         <div className="search"></div>
       </div>
       <div className="users">
