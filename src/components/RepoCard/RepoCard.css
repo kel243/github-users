@@ -10,13 +10,16 @@
   align-items: center;
   justify-content: center;
   margin: 0 5px 20px 5px;
+  transform: skew(-15deg);
 }
 
 .repoCard h2 {
   font-size: 17px;
+  transform: skew(15deg);
 }
 
 .repoCard:hover {
   border: 1px solid #32e0c4;
   color: #32e0c4;
+  text-shadow: 0 0 10px #32e0c4;
 }

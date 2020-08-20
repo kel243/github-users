@@ -41,9 +41,10 @@
   width: 150px;
   margin: 10px 30px;
   color: #eeeeee;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 
 .user-follower:hover {
   color: #32e0c4;
+  text-shadow: 0 0 10px #32e0c4;
 }
