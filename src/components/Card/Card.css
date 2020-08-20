@@ -1,6 +1,7 @@
 .card {
-  width: 300px;
-  padding: 20px 0 70px 0;
+  position: relative;
+  height: 350px;
+  width: 280px;
   background-image: linear-gradient(to top, #393e46, #393e46);
   color: #eeeeee;
   margin-bottom: 20px;
@@ -8,29 +9,40 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 10px 15px 3px rgba(34, 40, 49, 0.65);
-  background-image: radial-gradient(
-    rgba(57, 62, 70, 0.6),
-    rgba(57, 62, 70, 0.8),
-    rgb(57, 62, 70),
-    rgb(57, 62, 70)
-  );
 }
 
 .card:hover .card-image {
-  box-shadow: 0 0 25px 0 #32e0c4, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px 0 #eeeeee, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-heading {
   font-size: 20px;
   margin-bottom: 30px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .card-image {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid #eeeeee;
+  transition: all 0.2s ease;
+}
+
+.card-image-profile {
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -39,5 +51,27 @@
 }
 
 .card-image:hover {
+  box-shadow: 0 0 25px 0 #eeeeee, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image-profile:hover {
   box-shadow: 0 0 25px 0 #32e0c4, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-top {
+  background: rgb(50, 224, 196);
+  background: linear-gradient(
+    22deg,
+    rgba(50, 224, 196, 1) 34%,
+    rgba(41, 211, 193, 1) 52%,
+    rgba(0, 149, 177, 1) 70%
+  );
+  width: 100%;
+  height: 185px;
+  transform: skewY(-10deg) translateY(-50px);
+}
+
+.card-bottom {
+  width: 100%;
+  height: 175px;
 }

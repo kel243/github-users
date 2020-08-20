@@ -11,8 +11,10 @@ function Card(props) {
 
   return (
     <div className="card" onClick={clickHandler}>
+      <div className="card-top"></div>
+      <div className="card-bottom"></div>
+      <CardImage type={props.type} avatar={props.avatar} />
       <h2 className="card-heading">{props.login}</h2>
-      <CardImage avatar={props.avatar} />
     </div>
   );
 }

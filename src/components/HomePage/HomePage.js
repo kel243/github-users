@@ -129,6 +129,7 @@ function HomePage() {
                 id={user.id}
                 avatar={user.avatar_url}
                 key={index}
+                type="home"
               />
             );
           })}

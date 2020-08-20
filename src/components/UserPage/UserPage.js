@@ -46,7 +46,7 @@ function UserPage(props) {
   return (
     <div className="user-page">
       <div className="user-container">
-        <CardImage avatar={User.avatar_url} />
+        <CardImage type="profile" avatar={User.avatar_url} />
         <h2 className="user-heading">{User.login}</h2>
       </div>
       <div className="user-container user-container-dark">
