@@ -10,7 +10,7 @@ function Card(props) {
   };
 
   return (
-    <div className="card" onClick={clickHandler} key={props.key}>
+    <div className="card" onClick={clickHandler}>
       <h2 className="card-heading">{props.login}</h2>
       <CardImage avatar={props.avatar} />
     </div>
