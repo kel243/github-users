@@ -9,6 +9,7 @@ function UserPage(props) {
   const [Repos, setRepos] = useState([]);
   const [Followers, setFollowers] = useState([]);
 
+  // Fetch Github user based on the username found in url params
   useEffect(() => {
     fetch(`https://api.github.com/users/${props.match.params.userName}`)
       .then((response) => response.json())
@@ -18,6 +19,7 @@ function UserPage(props) {
       });
   }, []);
 
+  // Fetch 20 repos for Github user based on the username found in url params
   useEffect(() => {
     fetch(
       `https://api.github.com/users/${props.match.params.userName}/repos?per_page=20`
@@ -29,6 +31,7 @@ function UserPage(props) {
       });
   }, []);
 
+  // Fetch 20 followers for Github user based on the username found in url params
   useEffect(() => {
     fetch(
       `https://api.github.com/users/${props.match.params.userName}/followers?per_page=20`
