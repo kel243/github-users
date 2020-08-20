@@ -19,7 +19,9 @@ function UserPage(props) {
   }, []);
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${props.match.params.userName}/repos`)
+    fetch(
+      `https://api.github.com/users/${props.match.params.userName}/repos?per_page=1000`
+    )
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
@@ -29,7 +31,7 @@ function UserPage(props) {
 
   useEffect(() => {
     fetch(
-      `https://api.github.com/users/${props.match.params.userName}/followers`
+      `https://api.github.com/users/${props.match.params.userName}/followers?per_page=1000`
     )
       .then((response) => response.json())
       .then((response) => {
